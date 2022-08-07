@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <form action="" onsubmit="login(event)">
+            <div class="form-group">
+                <label for="">Username</label>
+                <input type="text" id="unm" class="form-control" >
+            </div>
+            <div class="form-group">
+                <label for="">Userpassword</label>
+                <input type="password" id="upass" class="form-control" >
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-info">
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function login(event){
+            event.preventDefault();
+            let name = document.getElementById("unm").value;
+            let password = document.getElementById("upass").value;
+            let data = localStorage.getItem("adminlogin");
+            if(data == null)
+            {
+                arr = [];
+            }
+            else{
+                arr = JSON.parse(data);
+            }
+            // if((arr[0].username == name) && (arr[0].password == password))
+            // {
+            //     window.location = "welcome.html";
+            // }
+            // else{   
+            //     window.location = "login.html";
+            // }
+            let newarr = arr.filter((items, index)=>{
+                return ((items.username == name) && (items.password == password))
+
+            });
+            if(newarr.length > 0)
+            {
+                window.location = "welcome.html";
+            }
+            else{
+                alert("wrong username and password");
+                window.location = "login.html";
+            }
+            //console.log(newarr);
+
+        }
+    </script>
+</body>
+</html>

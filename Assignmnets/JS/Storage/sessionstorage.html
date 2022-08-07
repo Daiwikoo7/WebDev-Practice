@@ -1,0 +1,39 @@
+<!-- 
+    sessionstorage :  data stored into the key and value paired in browser
+    =>
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+ </head>
+ <body>
+    Name : <input type="text" id="nm"> <button onclick="saveData()">Click</button>
+    <button onclick="showData()">Show</button>
+    <button onclick="deleteData()">Delete</button>
+
+    <script>
+        // save 
+        function saveData()
+        {
+            let name = document.getElementById("nm").value;
+            sessionStorage.setItem("user10", name);
+        }
+        // show 
+        function showData()
+        {
+            let data =  sessionStorage.getItem("user10");
+            console.log(data);
+        }
+        // delete  
+        function deleteData()
+        {
+            sessionStorage.removeItem("user10");
+        }
+
+    </script>
+ </body>
+ </html>

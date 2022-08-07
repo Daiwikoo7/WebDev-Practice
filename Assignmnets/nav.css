@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    background-color: cadetblue;
+    display: flex;
+}
+#logo{
+    padding: 15px;
+    text-decoration: none;
+    font-size: 24px;
+    color: #fff;
+}
+#chk{
+    display: none;
+}
+#myicon{
+    opacity: 0;
+}
+nav ul{
+    margin-left: auto;
+    display: flex;
+}
+nav ul li {
+    display: inline-block;
+    padding: 20px;   
+}
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+@media (max-width:500px){
+    nav{
+        flex-direction: column;
+    }   
+    #myicon{
+        opacity: 1;
+        position: absolute;
+        right: 26px;
+        top: 22px;
+        cursor: pointer;
+    }
+    #chk{
+        display: block;
+        position: absolute;
+        right: 26px;
+        top: 22px;
+        opacity: 0;
+        cursor: pointer;
+       
+    }
+    
+    nav ul{
+        margin-left: 0;
+        flex-direction: column;
+        position: absolute;
+        background-color: brown;
+        width: 100%;
+        top:-280px ;
+        transition: all 0.2s linear;
+        
+    }
+    nav ul li { 
+        padding: 14px;
+    }
+    nav ul li:hover { 
+        background-color: black;
+    }
+    #chk:checked ~ ul{
+        top: 60px;
+    
+    }
+   
+}

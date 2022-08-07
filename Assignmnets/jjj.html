@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform</title>
+    <style>
+body {
+            background-image: url('wp2580705-desktop-full-hd-wallpaper.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+
+
+        .box{
+            border: 5px solid gold;
+            width: 250px;
+            height: 250px;
+           overflow: hidden;
+            margin: 50px 300px;
+            position: relative;
+            text-align: center;
+            background-color:cornflowerblue
+        }
+        img{
+            width: 250px;
+            height: 250px;
+            transition: all 0.5s linear;   
+            object-fit: cover;
+        }
+        h2{
+            background-color:beige;
+            color:red;
+            overflow: hidden;
+            width: 100%;
+            padding: 10px;
+            margin: 0;
+        }
+        .box:hover img{
+            
+            transform: rotate(720deg) scale(0);
+        
+        }
+        
+        .box:hover h2, .box:hover img, .box:hover p, .box:hover .info{
+            top:-230px;
+        }
+        .box:hover p{
+            transition-delay: 0.3s ;
+        }
+        .box:hover .info{
+            transition-delay: 0.5s ;
+        }
+        img,h2,p,.info{ 
+            position:relative;
+            top:0;
+            transition-delay: 0s ;
+            transition: 0.3s all ease-in;
+  } 
+
+.info{
+
+padding: 10px;
+background-color:beige;
+color: goldenrod;
+text-decoration: none;
+font-weight: bolder;
+font-size: larger;
+}
+p{
+    color:lightgray;
+    padding-bottom: 17px;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="michael-dam-mEZ3PoFGs_k-unsplash.jpg" alt="">
+        <h2>Hover Style</h2>
+        <p>
+            A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.
+        </p>
+        <a href="#" class="info">Read More</a>
+    </div>
+</body>
+</html>

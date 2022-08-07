@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        img{
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: myanimate;
+            animation-duration: 5s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            /* animation-fill-mode:; */
+        }
+        @keyframes myanimate{
+            0%{
+                margin-left: 0;
+                margin-top: 0;
+                background-color: blue;
+            }
+            25%{
+                margin-left: 400px;
+                margin-top: 0;
+                background-color: brown;
+            }
+            50%{
+                margin-left: 400px;
+                margin-top: 400px;
+                background-color: darkmagenta;
+            }
+            75%{
+                margin-left: 0px;
+                margin-top: 400px;
+                background-color: orange;
+            }
+            100%{
+                margin-left: 0px;
+                margin-top: 0px;
+                background-color: indianred;
+            }
+        }
+        .box:hover{
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+<body>
+<img src="team-1.jpg" alt="">
+</body>
+</html>

@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1200px;
+padding: 10px;
+    background-color: white;
+    margin: 20px auto;
+
+
+}
+
+
+.logo {
+    font-weight: 600;
+    font-size: larger;
+    text-decoration: none;
+    margin: 5px 0px;
+    width: 100px;
+  }
+
+#chk {
+    display: none;
+}
+
+#myicon {
+    opacity: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul {
+    display: flex;
+    margin-left: auto;
+
+}
+
+
+.text1 {
+    color: black;
+    text-decoration: none;
+}
+
+.text2 {
+    color: #6C55F9;
+}
+
+
+nav ul li {
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+.home {
+    color: #6C55F9;
+}
+
+.btn-prm {
+    background-color: #6C55F9;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+
+}
+
+.btn {
+    color: white;
+
+}
+
+   
+.main-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: whitesmoke;
+    border-radius: 11px;
+
+}
+
+
+.box {
+    width: 40%;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding-bottom: 50px;
+}
+.h-1{
+    
+    margin: 80px 0;
+    font-size: 40px;
+    color: gray;
+    padding: 25px;
+    text-align: center;
+}
+.p-1{
+    
+    margin: 55px;
+width: 40%;
+font-size: 20px;
+color: gray;
+text-align: center;
+}
+.watch-btn{
+    margin: 0px auto;
+    background-color: #6C55F9;
+    padding: 18px 32px;
+    text-align: center;
+    color: white;
+    border-radius: 20px;}
+    
+.watch-btn a{
+    color: white;
+}
+.watch-btn i {
+    padding-left: 10px;
+    color: white;
+    font-size: 30px;
+}
+.img-box {
+    padding-top: 86px;
+    animation-duration: 1.5s;
+}
+
+.main-box2{
+
+    width: 30%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:800px){
+    nav{
+        flex-direction: column;
+        width: 100%;
+    
+    }   
+    #myicon{
+        opacity: 1;
+        position: absolute;
+        right: 26px;
+        top: 38px;
+        cursor: pointer;
+    }
+    #chk{
+        display: block;
+        position: absolute;
+        right: 27px;
+        top: 38px;
+        cursor: pointer;
+       opacity: 0;
+    }
+   
+   }
+    
+    nav ul{
+        margin-left: 0;
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+margin-top: -310px;
+opacity: 0;
+        transition: all 0.2s linear;
+        
+    }
+    nav ul li { 
+        padding: 14px;
+    }
+    nav ul li:hover { 
+        background-color: transparent;
+    }
+    #chk:checked ~ ul{
+       margin-top: 60px;
+        z-index: 1;
+        opacity: 1;
+    
+    }
+    .main-box{
+        width: 100%;
+        flex-direction: column-reverse;
+    }
+    .box{
+        width: unset;
+        
+        
+        }
+        
+        
+
+
+
+
+
+

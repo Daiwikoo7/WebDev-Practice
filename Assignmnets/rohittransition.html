@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+  background-image: url('book.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: 100% 100%;
+}
+.box{
+    height: 300px;
+    width: 300px;
+    margin: 100px auto;
+    border: 10px solid lightgray;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+
+}
+
+img{
+    height: 300px;
+    width: 300px;
+    
+}
+  img, #mask{ 
+      transition: 0.8s all cubic-bezier(0,.88,1,0) ;
+
+  } 
+#mask{
+    height: 300px;
+    width: 300px;
+    margin-top: -300px;
+    margin-left: -300px;
+   overflow: hidden;
+    position: absolute;
+
+}
+
+h2{
+text-align: center;
+background-color: rgba(255, 255, 255, 0.5);
+    margin-top: 30px;
+    padding: 10px;
+}
+
+
+.box:hover #mask{
+    
+            margin-left: 0;
+
+        }
+        .box:hover img{
+    
+    margin-left: 300px;
+    
+}
+p{
+    padding: 20px;
+}
+.info{
+
+    padding: 10px;
+    background-color: black;
+    color: white;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="team-1.jpg" alt="">
+        <div id="mask">
+            <h2>Hover Style</h2>
+            <p>
+                A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.
+            </p>
+            <a href="#" class="info">Read More</a>
+</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <form action="" onsubmit="signup(event)">
+            <div class="form-group">
+                <label for="">Username</label>
+                <input type="text" id="unm" class="form-control" >
+            </div>
+            <div class="form-group">
+                <label for="">Email</label>
+                <input type="email" id="eid" class="form-control" >
+            </div>
+            <div class="form-group">
+                <label for="">Userpassword</label>
+                <input type="password" id="upass" class="form-control" >
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-info">
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // signup user 
+        function signup(event)
+        {
+            event.preventDefault();
+            let uname = document.getElementById("unm").value;   
+            let uemail = document.getElementById("eid").value;   
+            let upwd = document.getElementById("upass").value;   
+            let data = localStorage.getItem("signup10");
+            if(data == null)
+            {
+                arr = [];
+            }
+            else {
+                arr = JSON.parse(data);
+            }
+            arr.push({"name": uname, "email": uemail, "password": upwd});
+            localStorage.setItem("signup10", JSON.stringify(arr));
+        }
+    </script>
+</body>
+</html>

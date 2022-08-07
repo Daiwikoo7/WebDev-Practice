@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href='style.css'>  
+
+</head>
+<body>
+
+  <h2>Modal Example</h2>
+  
+<!-- Trigger/Open The Modal -->
+<button id="myBtn">Open Modal</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h1>How can we improve our test insights experice?</h1>
+    </div>
+    <div class="modal-body">
+    
+      <textarea placeholder="Share suggestions or missing reports that you'd like to see" id="textarea" class="textarea"></textarea>
+      <P id="paragraph"></P>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-primary " onclick="Submit()">Submit</button>
+      <button type="button" class="btn">Skip</button>
+    </div>
+  </div>
+
+</div>
+<script src='../javascript/paaty.js'></script>
+</body>
+</html>

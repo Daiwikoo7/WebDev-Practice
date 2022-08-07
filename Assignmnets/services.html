@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #services-section{
+            background-color: cadetblue;
+        }
+        .container{
+            width: 1200px;
+            margin: 0 auto;
+        }
+        h2{
+            padding: 10px 0;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            text-align: center;
+        }
+        .service-box{
+            display: flex;
+        }
+        .box{
+            width: 33.33%;
+            
+        }
+        .content{
+            margin: 10px;
+            background-color: #fff;
+           
+            text-align: center;
+        }
+        .box img{
+            width: 100%;
+            height: 150px;
+        }
+        .box p{
+            padding: 10px;
+        }
+        .box a{
+            padding: 10px;
+            background-color: black;
+            color: #fff;
+        }
+        .read-more{
+            padding: 16px;
+        }
+
+
+        /* media query */ 
+        
+        /* @media only screen and (min-device-width:320px) and (max-device-width: 480px){
+            .container{
+                width: 100%;
+            }
+            .service-box{
+                flex-direction: column;
+            }
+            .box{
+                width: 100%;
+            }
+        } */
+        /* 768 - 1024  */
+        @media (max-width: 767px){
+            .container{
+                width: 100%;
+            }
+            .service-box{
+                flex-direction: column;
+            }
+            .box{
+                width: 100%;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+    <!-- media query :  
+        1. smart phones 
+
+        @media media only screen and (min-device-width:320px) and (max-device-width: 480px){
+            
+        }
+    
+    
+    -->
+<section id="services-section">
+    <div class="container">
+        <h2>Services</h2>
+        <div class="service-box">
+            <div class="box">
+                <div class="content">
+                    <img src="../bg1.jpeg" alt="">
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere voluptate ipsum voluptatem, ipsa excepturi numquam neque aliquam repellendus velit dolore quae necessitatibus, maxime cum ipsam beatae. Eos iusto nulla odit.
+                    </p>
+                    <div class="read-more">
+                        <a href="">Read More</a>
+                    </div>
+                        
+                </div>
+            </div>
+            <div class="box">
+                <div class="content">
+                    <img src="../bg1.jpeg" alt="">
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere voluptate ipsum voluptatem, ipsa excepturi numquam neque aliquam repellendus velit dolore quae necessitatibus, maxime cum ipsam beatae. Eos iusto nulla odit.
+                    </p>
+                    <div class="read-more">
+                        <a href="">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="content">
+                    <img src="../bg1.jpeg" alt="">
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere voluptate ipsum voluptatem, ipsa excepturi numquam neque aliquam repellendus velit dolore quae necessitatibus, maxime cum ipsam beatae. Eos iusto nulla odit.
+                    </p>
+                    <div class="read-more">
+                        <a href="">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>

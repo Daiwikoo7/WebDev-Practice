@@ -1,0 +1,21 @@
+Bootstrap is a designing framework which build a responsive web application..
+
+Bootstrap  = Html + Css + Javascript 
+
+Bootstrap Version : 4.7 
+
+Bootstrap 4 :  
+
+4 library : 
+
+css 
+bootstrap.min.css 
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+js : 
+jquery.min.js
+popper.min.js
+bootstrap.min.js 
+
+bootstrap working on class not id 

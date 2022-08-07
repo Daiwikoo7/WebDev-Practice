@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>TODO Manager</h2>
+    <hr>
+    <div class="form-wrap">
+            <div class="form">
+                <label for="task">Task Details</label> &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text" id="task" name="task" >
+            </div>
+            <div class="form">
+                <label for="name">Name</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text" id="name" name="name" >
+            </div>
+            <div class="form">
+                <label for="due date">Due Date</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="date" name="due date" id="due date">
+            </div>
+        <button class="btn" onclick="myFunction()">Add Task</button>
+    </div>
+    <br>
+    <br>
+    <table id="myTable">
+        <tr>
+            <th>Task Details</th>
+            <th>Assigne</th>
+            <th>Due Date</th>
+            <th>Action</th>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <script>
+        function myFunction() {
+            var table = document.getElementById("myTable");
+            var taskv= document.getElementById("task").value;
+            var namev = document.getElementById("name").value;
+            var dd = document.getElementById('due date').value;
+            var chkbox = document.createElement("INPUT");
+            chkbox.type = "checkbox";
+            chkbox.id = "chkdone";
+
+            //document.getElementById("chkdone").addEventListener("click", deleterow);
+
+            var row = table.insertRow(-1);
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            var cell3 = row.insertCell(2);
+            var cell4 = row.insertCell(3);
+            cell1.innerHTML = taskv;
+            cell2.innerHTML =namev;
+            cell3.innerHTML = dd;
+            cell4.appendChild(chkbox);
+            document.getElementById("task").value = "";
+            document.getElementById("name").value = "";
+            document.getElementById("due date").value = "";
+        }
+    </script>
+
+    <p id="test"></p>
+    
+</body>
+</html>

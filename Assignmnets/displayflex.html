@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display : none, block, lnline, inlie-block, flex</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 1200px;
+            height: 400px;
+            background-color: cornflowerblue;
+            margin: 50px auto;
+        }   
+        .mainbox{
+            display: flex;
+            flex-direction: row;
+            /* justify-content: center; */
+            /* justify-content: space-around; */
+            /* justify-content: space-between; */
+            justify-content: space-evenly;
+        }
+        .box {
+            width: 250px;
+            height: 300px;
+            margin:50px 0;
+            background-color: white;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="mainbox"  img src="team1.png" alt="">
+            <div id="box1" class="box"></div>
+            <div id="box2" class="box"></div>
+            <div id="box3" class="box"></div>
+        </div>
+    </div>
+</body>
+</html>

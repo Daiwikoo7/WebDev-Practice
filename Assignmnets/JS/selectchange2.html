@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+    <select onchange="test(this)" id="select_id">
+        <option value="Select">-Select-</option>
+        <option value="Indore">Indore</option>
+        <option value="Bhopal">Bhopal</option>
+        <option value="Ujjain">Ujjain</option>
+    </select>
+
+    <script>
+
+function test(a) {
+        var x = (a.value || a.options[a.selectedIndex].value);
+        alert(x);
+    }
+    </script>
+
+
+</body>
+</html>

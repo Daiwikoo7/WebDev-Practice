@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Form</title>
+</head>
+<body>
+    <table border="1" align="center" width="600" height="400">
+        <tr>
+            <td>Name</td>
+            <td><input type="text" name="txtName" placeholder="Enter Name "></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input type="email" name="txtEmail" placeholder="Enter Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$"></td>
+        </tr>
+        <tr>
+            <td>Dob</td>
+            <td>
+                <input type="date" name="txtDob">
+            </td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td>
+                male <input type="radio" name="rdbGender" value="male">
+                female <input type="radio" name="rdbGender" value="female">
+            </td>
+        </tr>
+        <tr>
+            <td>Select City</td>
+            <td>
+                <select name="selCity">
+                    <option value="">Select City</option>
+                    <option value="indore">Indore</option>
+                    <option value="ujjain">Ujjain</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Hobby</td>
+            <td>
+                Music <input type="checkbox" name="chkHobby" value="music">
+                Dancing <input type="checkbox" name="chkHobby" value="dancing">
+            </td>
+        </tr>
+        
+        <tr>
+            <td>Password</td>
+            <td><input type="password" name="txtPassword" placeholder="Enter Password"/></td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td>
+                <textarea name="txaAddress"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>Upload Image</td>
+            <td><input type="file" name="txtPicture"></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" name="btnSubmit" value="Signup">
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="reset" value="cancle">
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

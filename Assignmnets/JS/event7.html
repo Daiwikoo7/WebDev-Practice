@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Name : <input type="text" id="nm">
+    <button onclick="getData()">CLick</button>
+    Password : <input type="text" id="pass">
+    <script>
+        function getData(){
+            let uname = document.getElementById("nm").value;
+            let upass = document.getElementById("pass").value;
+            document.getElementById("nm").value = "";
+            document.getElementById("pass").value = uname;
+          
+        }
+    </script>
+</body>
+</html>

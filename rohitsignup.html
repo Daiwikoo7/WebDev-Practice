@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Form</title>
+    <link rel = "icon" href ="sign-in.png"type = "image/x-icon">
+</head>
+<body>
+    <form action="home.html" method="post">
+    <h1 align="center">Signup Form</h1>
+    <table border="0" width="200" align="center" height="120">
+<tr>
+    <td colspon="2"><h3>Name</h3></td></tr>
+    <td><input type="text" placeholder="Enter name" name="txtName" required size=" 50%" pattern="[A-Za-z]"></td>
+
+    <tr>
+        <td colspon="2"><h3>Email</h3></td></tr>
+        <td><input type="email" placeholder="Enter Email" name="txtEmail" required size=" 50%"></td>
+
+        <tr>
+            <td colspon="2"><h3>Contact No.</h3></td></tr>
+            <td><input type="tel" placeholder="Enter Number" name="txtel" required size=" 50%" pattern="[6789][0-9]{9}"></td>
+
+            <tr>
+                <td colspon="2"><h3>Date of birth</h3></td></tr>
+    
+                <td> <input type="date" name="txtDob" required> </td>
+    
+                <tr>
+                    <td colspon="2"><h3>Gender</h3></td></tr>
+                    <td>male <input type="radio" name="rdbGender" value="male" required>
+                        female <input type="radio" name="rdbGender" value="female"></td>
+
+               <tr><td colspon="2"><h3>Select city</h3></td></tr></tr>
+               <td>
+                <select name="selCity" required>
+                    <option value="">Select City</option>
+                    <option value="indore">Indore</option>
+                    <option value="ujjain">Ujjain</option>
+                </select>
+            </td>
+                     
+            <tr><td colspon="2"><h3>Hobby</h3></td></tr></tr>
+
+            <td>
+                Music <input type="checkbox" name="chkHobby" value="music">
+                Dancing <input type="checkbox" name="chkHobby" value="dancing">
+            </td>
+
+           
+
+
+    <tr>
+        <td colspon="2"><h3>Password</h3></td></tr>
+        <td><input type="password" placeholder="Enter Password" name="txtPassword" required size=" 50%"></td>
+
+        <tr><td colspon="2"><h3>Address</h3></td></tr></tr>
+
+        <td>
+            <textarea name="txaAddress" rows="4" cols="47"></textarea>
+        </td>
+            
+        <tr>
+            <td colspon="2"><H3>Upload Image</H3>
+            <input type="file" name="txtPicture"></td>
+        </tr>
+
+
+        <tr>
+            <td colspan="2"><br>
+                <input type="submit" name="btnSubmit" value="Signup">
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="reset" value="cancle">
+            </td>
+        </tr>
+
+        <tr>
+        <td><br>Forgot <a href="#"> password? </a></td>
+          </tr>
+    </table>
+</form>
+</body>
+</html>
