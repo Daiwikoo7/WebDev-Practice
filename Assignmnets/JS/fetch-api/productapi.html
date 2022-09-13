@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Api</title>
+<link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- 
+        https://fakestoreapi.com/
+     -->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <div class="container">
+        <a href="" class="navbar-brand">Ecommerce Store</a>
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Products</a>
+          </li>
+        </ul>
+        <ul class="ml-auto">
+          <li>
+           <a href="cart.html"> <i
+              class="fa fa-cart-arrow-down "
+              style="color: #fff; font-size: 30px"
+              aria-hidden="true"
+            ></i></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <h3 class="text-center p-3">All Products</h3>
+      <div class="row mt-2" id="storeData"></div>
+    </div>
+
+    <div class="modal" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <h4 class="modal-title text-center">Product Details Page</h4>
+          <div class="modal-body" id="modeldata"></div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function store() {
+        let str = "";
+        const url = "https://fakestoreapi.com/products";
+        fetch(url)
+          .then((res) => {
+            return res.json();
+          })
+          .then((data) => {
+            //console.log(data);
+            data.forEach((items, index) => {
+              str += `<div class="col-sm-4 mb-3">
+                                    <div class="card">
+                                        <img class="card-img-top" src=${items.image} alt="Card image" height="300">
+                                        <div class="card-body" >
+                                        <h4 class="card-title">${items.category}</h4>
+                                        <p class="card-text">
+                                            Price: ₹ ${items.price}</p>
+                                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" onclick="view(${index})">
+      View Details
+    </button>
+    <button type="button" class="btn btn-primary"onclick="add_to_cart(${items.id})">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>`;
+            });
+            document.getElementById("storeData").innerHTML = str;
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      }
+      store();
+      function view(id) {
+        {
+          let sr = "";
+          const url = "https://fakestoreapi.com/products";
+          fetch(url)
+            .then((res) => {
+              return res.json();
+            })
+            .then((data) => {
+              //console.log(data);
+              data.forEach((items, index) => {
+                if (id == index) {
+                  sr += `<div class="card">
+                                                                      <div class="row">
+                                                            <div class="col-4">
+                                                              <img class="card-img-top" src=${items.image} alt="Card image" height="300">
+                                                              </div>
+                                              <div class="col-8">
+                                                <h4 class="card-title">${items.title}</h4>
+                                                <h4 class="card-title">Rating :${items.rating.rate}</h4>
+                                                <h4 class="card-title">${items.category}</h4>
+                                        <p class="card-text font-weight-bold text-success">
+                                            Price: ₹ ${items.price}</p></div>
+
+                                          
+                                            </div>
+                                        </div>
+                                    </div>`;
+                }
+              });
+              document.getElementById("modeldata").innerHTML = sr;
+            })
+            .catch((error) => {
+              console.log(error);
+            });
+        }
+      }
+      function add_to_cart(pid) {
+        let cart_data = localStorage.getItem("cartdata");
+        if (cart_data == null) {
+          cartArr = [];
+        } else {
+          cartArr = JSON.parse(cart_data);
+        }
+
+        fetch(`https://fakestoreapi.com/products/${pid}`)
+          .then((res) => {
+            return res.json();
+          })
+          .then((pdata) => {
+            cartArr.push(pdata);
+            localStorage.setItem("cartdata", JSON.stringify(cartArr));
+          });
+      } 
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

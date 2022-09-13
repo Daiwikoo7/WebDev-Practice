@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Services</li>
+    </ul>
+    <button onclick="myfun()">CLick</button>
+    <script>
+        function myfun(){
+           let x =  document.querySelectorAll("li"); // genrate 
+            //console.log(x.length)
+            // for(let i = 0; i<x.length; i++)
+            // {
+            //     console.log(x[i].innerText);
+
+            // }
+
+            for(let y of x)
+            {
+                console.log(y.innerText);
+            }
+        }
+    </script>
+</body>
+</html>

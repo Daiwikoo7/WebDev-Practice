@@ -1,0 +1,29 @@
+<script>
+    /* 
+        parameterised constructor : a constrcutor take minimum one parameter ..  
+    */
+//    class Student {
+//         rno = 0;
+//         constructor(rollnumber){
+//             //console.log("Constructor Called");
+//             this.rno = rollnumber;
+//             console.log(this.rno);
+//         }
+//    }
+//    let obj = new Student(101);
+
+class EcommerceApi {
+    // = ""
+    constructor(){
+        //this.color = "red";
+        fetch("https://fakestoreapi.com/products").then((res)=>{
+            return res.json();
+        }).then((data)=>{
+            //console.log(data);
+            this.result = data;
+        })
+        
+    }
+}
+let obj = new EcommerceApi();
+</script>

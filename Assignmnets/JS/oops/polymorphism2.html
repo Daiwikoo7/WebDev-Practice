@@ -1,0 +1,52 @@
+<script>
+    /*
+        polymorphism : One entity can perform multiple forms 
+
+        1. Compile Time Polymorphism : 
+            Method Overloading : A class can contain multiple same name of method but number of argument should be different : 
+            Javascript does not support overloading .. 
+
+            class A{
+                demo(a)
+                {
+
+                }
+                demo(a,b)
+                {
+
+                }
+            }
+            let obj = new A();
+            obj.demo(10)
+            obj.demo(10,20)
+
+        2. Runtime Polymorphism : 
+            Method Overriding : Each class contain same name of method abd argument should be same.. 
+
+            class A{
+                demo()
+            }
+            class B extends A{
+                demo(){
+
+                }
+            }
+            let obj = new B();
+            obj.demo();
+    */
+   class React{
+    demo()
+    {
+        console.log("Demo Called");
+    }
+   }
+   class B extends React{
+    demo()
+    {
+        super.demo();
+        console.log("Again Demo Called");
+    }
+   }
+   let obj = new B();
+   obj.demo();
+</script>

@@ -1,0 +1,15 @@
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+    async function  getData(){
+        console.log("Inside function");
+        let res = await axios.get("http://jsonplaceholder.typicode.com/posts");
+        return res;
+    }
+    console.log("Before function calling");
+    let data = getData();
+    console.log(data);
+    data.then((result)=>{  //alert(result.data)
+        console.log(result.data); 
+    })
+    //console.log(data);
+ </script>

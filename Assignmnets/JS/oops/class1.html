@@ -1,0 +1,25 @@
+<script>
+    // student 
+    class Student
+    {
+        // objects 
+        rno = 0;
+        name = "";
+        eid = "";
+
+        // methods (action)
+        addUser(){
+           this.rno = 101;
+           this.name = "admin";
+           this.eid = "admin@gmail.com";    
+        }
+        showUser(){
+            console.log(this.rno);
+            console.log(this.name);
+            console.log(this.eid);
+        }
+    }
+    let obj = new Student();
+    obj.addUser();
+    obj.showUser();
+</script>

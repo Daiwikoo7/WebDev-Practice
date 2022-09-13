@@ -1,0 +1,39 @@
+<script>
+    /*
+        Inhritence : is the concepts of reusability ... 
+
+        The members of parent class are inherit by child class using extends keywords . 
+
+        1. SIngle level : 
+
+        2. Multilevel 
+
+        3. Multiple 
+
+        4. Hierarichal
+        
+        5. Hybrid 
+
+    */
+   class A 
+   {
+       funA(){
+        console.log("FunctioA called");
+       } 
+   }
+   class B extends A {
+    funB(){
+        console.log("FunctionB called");
+    }
+   }
+  class C extends B {
+    funC(){
+        console.log("FunctionC called");
+    }
+  }
+  let obj = new C();
+  obj.funA();
+  obj.funB();
+  obj.funC();
+   
+</script>

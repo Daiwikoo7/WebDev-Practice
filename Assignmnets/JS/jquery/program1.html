@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="nm1" class="nm">
+    <input type="text" id="nm1" class="nm">
+    <button onclick="myfun()">CLick</button>
+    <script>
+        function myfun(){
+           //let x =  document.querySelector("#nm1");
+           //let x =  document.querySelector(".nm");
+           
+           //let x =  document.querySelectorAll("#nm1"); // genrate nodeList
+           //console.log(x[0]);
+
+           let x =  document.querySelectorAll(".nm"); // genrate 
+           console.log(x[0].value);
+
+        }
+    </script>
+</body>
+</html>

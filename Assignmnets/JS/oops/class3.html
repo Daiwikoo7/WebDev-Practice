@@ -1,0 +1,34 @@
+<script>
+    class Bank
+    {
+       acno = 0;
+       bankname = "";
+       name = "";
+       amount = 0;
+
+       openAccount(given_acno, given_bankname, given_name, given_amount){
+          this.acno = given_acno;
+          this.bankname = given_bankname;
+          this.name = given_name;
+          this.amount = given_amount;  
+       }
+       deposite(given_amount)
+       {
+        this.amount = this.amount +  given_amount
+       }
+       withdraw(rs){
+        
+        this.amount = this.amount -  rs;
+       }
+       checkBalance(){
+        console.log(this.amount);
+       }
+       bankDetails(){
+        console.log(this.acno);
+        console.log(this.bankname);
+        console.log(this.name);
+        console.log(this.amount);
+       }
+    }
+    let obj =  new Bank();
+</script>

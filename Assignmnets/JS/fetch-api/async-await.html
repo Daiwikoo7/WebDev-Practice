@@ -1,0 +1,29 @@
+<!-- 
+    fetch() -  then().then()
+    axios() - then() 
+    async - await : Es6 
+
+    async : handle the promises (return a promises) 
+    await () 
+    fetch() 
+
+ -->
+
+ <script>
+    async function getData()
+    {   
+        console.log("I am inside the function ");
+        let res = await fetch("http://jsonplaceholder.typicode.com/posts");
+        let data = await res.json();
+        return data;
+    }
+    console.log("Execute befor function calling");
+    let result = getData();
+    console.log(result);
+    result.then((apidata)=>{
+        console.log(apidata);
+    })
+
+
+
+ </script>
